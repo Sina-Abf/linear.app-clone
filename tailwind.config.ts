@@ -9,9 +9,13 @@ const config: Config = {
   theme: {
     colors: {
       background: '#000212',
-      white: '#fff'
+      'white-a08': 'rgba(255,255,255,0.08)',
+      white: '#fff',
+      'primary-button': '#5e6ad2'
     },
     fontSize: {
+      xs: '1.3rem',
+      sm: '1.4rem',
       medium: '1.6rem',
       lg: ['2.2rem', '1.3'],
       '5xl': ['8rem', '1']
