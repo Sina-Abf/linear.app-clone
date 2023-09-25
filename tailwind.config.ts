@@ -8,10 +8,13 @@ const config: Config = {
   ],
   theme: {
     colors: {
+      transparent: 'transparent',
       background: '#000212',
       'white-a08': 'rgba(255,255,255,0.08)',
       white: '#fff',
-      'primary-button': '#5e6ad2'
+      'primary-button': '#5e6ad2',
+      grey: '#b4bcd099',
+      'grey-dark': 'hsla(0,0%,100%,.07)'
     },
     fontSize: {
       xs: '1.3rem',
@@ -33,7 +36,11 @@ const config: Config = {
       9: '3.6rem',
       10: '4rem',
       11: '4.4rem',
-      12: '4.8rem'
+      12: '4.8rem',
+      'navigation-height': 'var(--navigation-height)'
+    },
+    boxShadow: {
+      'primary-high': '0px 7px 32px rgba(0,0,0,.35)'
     }
   },
   plugins: []

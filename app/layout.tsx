@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={inter.className}>
         <Header />
-        <main className='pt-[var(--navigation-height)]'>{children}</main>
+        <main className='pt-navigation-height'>{children}</main>
         <footer>
           <Container>footer here</Container>
         </footer>

@@ -8,7 +8,7 @@ const Container = ({
   className?: string;
 }) => {
   return (
-    <div className={twMerge('max-w-[120rem] mx-auto', className)}>
+    <div className={twMerge('max-w-[120rem] mx-auto px-8', className)}>
       {children}
     </div>
   );
