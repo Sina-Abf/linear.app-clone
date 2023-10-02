@@ -27,15 +27,17 @@ const Header = () => {
         >
           <nav
             className={twMerge(
-              'h-[calc(100vh_-_var(--navigation-height))] md:opacity-100 transition-opacity duration-500 md:block fixed md:relative top-navigation-height md:top-0 md:h-auto md:w-auto left-0 w-full overflow-auto bg-background md:bg-transparent',
-              hamburgerIsOpen ? 'opacity-100' : 'opacity-0'
+              'h-[calc(100vh_-_var(--navigation-height))] md:opacity-100 transition-opacity duration-500 md:block fixed md:relative top-navigation-height md:top-0 md:h-auto md:w-auto left-0 w-full overflow-auto bg-background md:bg-transparent md:translate-x-0 md:transition-none',
+              hamburgerIsOpen
+                ? 'opacity-100 translate-x-0'
+                : 'opacity-0 translate-x-[-100vw]'
             )}
           >
             <ul
               className={twMerge(
                 'flex flex-col md:flex-row md:items-center h-full [&_li]:ml-6 [&_li]:border-b [&_li]:border-b-grey-dark [&_li]:md:border-none',
                 '[&_a]:text-medium [&_a]:h-navigation-height [&_a]:flex [&_a]:items-center [&_a]:w-full [&_a]:md:text-sm [&_li]:ml-6 [&_a:hover]:text-grey',
-                'ease-in [&_a]:duration-300 [&_a]:translate-y-8 [&_a]:md:translate-y-0 [&_a]:[color,transform]',
+                'ease-in [&_a]:duration-300 [&_a]:translate-y-8 [&_a]:md:translate-y-0 [&_a]:[color,transform] [&_a]:md:transition-colors',
                 hamburgerIsOpen && '[&_a]:translate-y-0'
               )}
             >
