@@ -12,8 +12,11 @@ const Header = () => {
   return (
     <header className='fixed top-0 left-0 w-full border-b border-white-a08 backdrop-blur-[30px] saturate-[120%]'>
       <Container className='flex h-navigation-height items-center'>
-        <Link href='/'>
-          <Logo />
+        <Link
+          className='flex items-center'
+          href='/'
+        >
+          <Logo /> <span className='ml-2 text-medium'>Linear</span>
         </Link>
 
         <div
