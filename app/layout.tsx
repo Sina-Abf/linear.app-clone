@@ -21,7 +21,9 @@ export default function RootLayout({
     <html lang='en'>
       <body className={inter.className}>
         <Header />
-        <main className='pt-navigation-height'>{children}</main>
+        <main className='pt-navigation-height bg-page-gradient'>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

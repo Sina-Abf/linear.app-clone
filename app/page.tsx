@@ -6,11 +6,13 @@ export default function Home() {
     <div>
       <Hero>
         <Hero.Title>
-          Linear is a better way <br /> to build products
+          Linear is a better way <br className='hidden md:block' /> to build
+          products
         </Hero.Title>
 
         <Hero.Subtitle>
-          Meet the new standard for modern software development. <br />
+          Meet the new standard for modern software development.
+          <br className='hidden md:block' />
           Streamline issues, sprints, and product roadmaps.
         </Hero.Subtitle>
       </Hero>
