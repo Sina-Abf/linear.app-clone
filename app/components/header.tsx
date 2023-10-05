@@ -4,11 +4,27 @@ import Link from 'next/link';
 import Container from './container';
 import { HamburgerIcon, Logo } from './icons';
 import Button from './ui/button';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 const Header = () => {
   const [hamburgerIsOpen, setHamburgerIsOpen] = useState(false);
+
+  useEffect(() => {
+    const html = document.querySelector('html');
+
+    if (html) html.classList.toggle('overflow-hidden', hamburgerIsOpen);
+  }, [hamburgerIsOpen]);
+
+  useEffect(() => {
+    const closeHamburgerNavigation = () => setHamburgerIsOpen(false);
+    window.addEventListener('orientationchange', closeHamburgerNavigation);
+    window.addEventListener('resize', closeHamburgerNavigation);
+    return () => {
+      window.removeEventListener('orientationchange', closeHamburgerNavigation);
+      window.removeEventListener('resize', closeHamburgerNavigation);
+    };
+  }, []);
   return (
     <header className='fixed top-0 left-0 w-full border-b border-white-a08 backdrop-blur-[30px] saturate-[120%]'>
       <Container className='flex h-navigation-height items-center'>
