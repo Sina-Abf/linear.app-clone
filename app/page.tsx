@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import Hero from './components/hero';
-import hero from '~/public/images/hero.webp';
 import Button from './components/ui/button';
 import Container from './components/container';
 import { ArrowIcon } from './components/icons';
+import HeroImage from './components/hero-image';
 export default function Home() {
   return (
-    <Container className='mt-[6.4rem]'>
+    <Container className='mt-[6.4rem] overflow-hidden'>
       <Hero>
         <Button
           href='/'
@@ -40,12 +40,8 @@ export default function Home() {
             <ArrowIcon className='w-[1.6rem] h-[1.6rem]' />
           </span>
         </Button>
+        <HeroImage />
       </Hero>
-      <Image
-        className='mt-[12.8rem]'
-        src={hero}
-        alt='hero image'
-      />
     </Container>
   );
 }
