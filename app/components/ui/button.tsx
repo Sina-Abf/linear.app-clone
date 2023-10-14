@@ -39,7 +39,7 @@ const Button = ({
   return (
     <Link
       {...props}
-      className={buttonClasses({ variant, size })}
+      className={buttonClasses({ variant, size, className })}
       href={href}
     >
       {children}

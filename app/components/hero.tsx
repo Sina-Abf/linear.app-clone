@@ -1,20 +1,35 @@
+import { twMerge } from 'tailwind-merge';
+
 interface HeroProps {
   children: React.ReactNode;
 }
 interface HeroElementProps {
   children: React.ReactNode;
+  className?: string;
 }
 
-export const Title = ({ children }: HeroElementProps) => {
+export const Title = ({ children, className }: HeroElementProps) => {
   return (
-    <h1 className='text-6xl md:text-8xl my-6 text-gradient font-medium tracking-[-0.01em]'>
+    <h1
+      className={twMerge(
+        'text-6xl md:text-8xl my-6 text-gradient font-medium tracking-[-0.01em]',
+        className
+      )}
+    >
       {children}
     </h1>
   );
 };
-export const Subtitle = ({ children }: HeroElementProps) => {
+export const Subtitle = ({ children, className }: HeroElementProps) => {
   return (
-    <p className='text-lg md:text-xl mb-12 text-primary-text'>{children}</p>
+    <p
+      className={twMerge(
+        'text-lg md:text-xl mb-12 text-primary-text',
+        className
+      )}
+    >
+      {children}
+    </p>
   );
 };
 

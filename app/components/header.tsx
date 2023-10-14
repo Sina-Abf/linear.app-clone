@@ -26,7 +26,7 @@ const Header = () => {
     };
   }, []);
   return (
-    <header className='fixed top-0 left-0 w-full border-b border-transparent-white backdrop-blur-[30px] saturate-[120%]'>
+    <header className='fixed top-0 left-0 z-50 w-full border-b border-transparent-white backdrop-blur-[30px] backdrop-saturate-[120%]'>
       <Container className='flex h-navigation-height items-center'>
         <Link
           className='flex items-center'
