@@ -27,3 +27,21 @@
     color: transparent;
   }
 }
+
+@keyframes bUubUT {
+  from {
+    stroke-dashoffset: 1;
+  }
+
+  50% {
+    stroke-dashoffset: 0;
+  }
+
+  99% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    visibility: hidden;
+  }
+}
