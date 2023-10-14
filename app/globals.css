@@ -7,7 +7,7 @@
     --navigation-height: 4.8rem;
   }
   html {
-    @apply bg-background text-white;
+    @apply bg-background text-off-white;
     font-size: 62.5%;
   }
 }
@@ -23,7 +23,7 @@
       rgb(255, 255, 255) 30%,
       rgba(255, 255, 255, 0.38)
     );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
   }
 }

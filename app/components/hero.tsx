@@ -7,7 +7,9 @@ interface HeroElementProps {
 
 export const Title = ({ children }: HeroElementProps) => {
   return (
-    <h1 className='text-6xl md:text-8xl my-6 text-gradient'>{children}</h1>
+    <h1 className='text-6xl md:text-8xl my-6 text-gradient font-medium tracking-[-0.01em]'>
+      {children}
+    </h1>
   );
 };
 export const Subtitle = ({ children }: HeroElementProps) => {

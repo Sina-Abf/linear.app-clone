@@ -82,7 +82,7 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <footer className='border-t border-white-a08 py-[5.6rem] mt-12 text-sm'>
+    <footer className='border-t border-transparent-white py-[5.6rem] mt-12 text-sm'>
       <Container className='flex flex-col lg:flex-row justify-between'>
         <div>
           <div className='flex lg:flex-col flex-row justify-between h-full'>
@@ -111,7 +111,7 @@ const Footer = () => {
                     className='[&_a]:last:mb-0'
                   >
                     <Link
-                      className='text-grey mb-3 block transition-colors hover:text-white'
+                      className='text-grey mb-3 block transition-colors hover:text-off-white'
                       href={link.href}
                     >
                       {link.title}
