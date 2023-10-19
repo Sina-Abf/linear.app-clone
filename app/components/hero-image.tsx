@@ -29,7 +29,6 @@ const HeroImage = () => {
   };
 
   useEffect(() => {
-    if (!inView) return;
     const renderLine = (timeout: number) => {
       timeoutRef.current = setTimeout(() => {
         setLines((lines) => [
@@ -50,19 +49,19 @@ const HeroImage = () => {
     return () => {
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
-  }, [inView]);
+  }, []);
 
   return (
     <div ref={ref} className="[perspective:2000px] py-[6.4rem] mt-[12.8rem]">
       <div
         className={twMerge(
-          "relative bg-hero-gradient border border-transparent-white bg-white bg-opacity-[0.01] rounded-lg",
+          "relative bg-hero-gradient border border-transparent-white bg-opacity-[0.2] rounded-lg",
           inView ? "animate-image-rotate" : "[transform:rotateX(25deg)]",
           "before:w-full before:h-full before:top-0 before:left-0 before:absolute before:bg-hero-glow before:[filter:blur(120px)] before:opacity-0",
           inView && "before:animate-image-glow",
         )}
       >
-        <div className="absolute w-full h-full top-0 left-0 z-20">
+        <div className="absolute w-full h-full top-0 left-0 z-20 overflow-hidden">
           {lines.map((line) => (
             <span
               key={line.id}
