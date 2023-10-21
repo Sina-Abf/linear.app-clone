@@ -23,7 +23,7 @@ const Clients = () => {
         <br className="hidden md:block" />
         From next-gen startups to established enterprises.
       </p>
-      <div className="[&_svg]:max-w-[16rem] gap-x-6 gap-y-8 grid grid-cols-2 place-items-center md:grid-cols-6">
+      <div className="[&_svg]:max-w-[16rem] gap-x-6 gap-y-8 grid grid-cols-2 place-items-center md:grid-cols-6 mb-[12.8rem]">
         <RampIcon />
         <LoomIcon className="hidden md:block" />
         <VercelIcon />

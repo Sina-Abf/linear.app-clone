@@ -1,12 +1,13 @@
 import Hero from "./components/hero";
 import Button from "./components/ui/button";
 import Container from "./components/container";
-import { ArrowIcon } from "./components/icons";
+import { ArrowIcon, StartsIllustration } from "./components/icons";
 import HeroImage from "./components/hero-image";
 import Clients from "~/app/components/clients";
+import { twMerge } from "tailwind-merge";
 export default function Home() {
   return (
-    <>
+    <div className="overflow-hidden">
       <Container className="pt-[6.4rem] pb-[16.4rem] md:pb-[25.6rem]">
         <Hero>
           <Button
@@ -47,7 +48,16 @@ export default function Home() {
 
       <Container>
         <Clients />
+        <div
+          className={twMerge(
+            "h-[60rem] overflow-hidden my-[-12.8rem] relative mask-radial-faded",
+            "before:absolute before:opacity-[0.4] before:bg-radial-faded before:inset-0 [--color:#7877C6]",
+            "after:absolute after:bg-background after:w-[200%] after:-left-1/2 after:aspect-[1_/_0.7] after:rounded-[50%] after:border-t after:border-t-[rgba(120,_118,_197,_0.4)] after:top-1/2",
+          )}
+        >
+          <StartsIllustration className="absolute top-1/2 left-1/2 [transform:translate(-50%,_-50%)] mask-svg" />
+        </div>
       </Container>
-    </>
+    </div>
   );
 }

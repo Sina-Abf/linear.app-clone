@@ -14,7 +14,7 @@
 
 @layer utilities {
   .text-shadow {
-    text-shadow: rgba(0, 0, 0, 0.25) 0px 3px 8px;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
   }
 
   .text-gradient {
@@ -26,22 +26,12 @@
     background-clip: text;
     color: transparent;
   }
-}
 
-@keyframes bUubUT {
-  from {
-    stroke-dashoffset: 1;
+  .mask-radial-faded {
+    mask-image: radial-gradient(circle, black, transparent 80%);
   }
 
-  50% {
-    stroke-dashoffset: 0;
-  }
-
-  99% {
-    stroke-dashoffset: 0;
-  }
-
-  100% {
-    visibility: hidden;
+  .mask-svg {
+    mask-image: radial-gradient(circle at center bottom, black, transparent);
   }
 }
